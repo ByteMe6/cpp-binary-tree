@@ -5,10 +5,6 @@
 
 using namespace std;
 
-
-
-
-
 int main() {
     Tree *node_tree;
     node_tree = new Tree();
