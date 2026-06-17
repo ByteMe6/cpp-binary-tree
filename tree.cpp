@@ -2,9 +2,8 @@
 #include <iostream>
 
 Tree* addNode(Tree *tree, int item) {
-    if (tree == nullptr) {
+    if (tree == nullptr)
         return new Tree{item, nullptr, nullptr};
-    }
     if (item < tree->value)
         tree->left = addNode(tree->left, item);
     else if (item > tree->value)
@@ -14,18 +13,22 @@ Tree* addNode(Tree *tree, int item) {
 
 void printTree(Tree *tree) {
     if (tree == nullptr) return;
-    std::cout << "Node: " << tree->value << "
-";
-    if (tree->left)  { std::cout << "  Left of "  << tree->value << ": "; printTree(tree->left);  }
-    if (tree->right) { std::cout << "  Right of " << tree->value << ": "; printTree(tree->right); }
+    std::cout << "Node: " << tree->value << "\n";
+    if (tree->left) {
+        std::cout << "  Left of " << tree->value << ": ";
+        printTree(tree->left);
+    }
+    if (tree->right) {
+        std::cout << "  Right of " << tree->value << ": ";
+        printTree(tree->right);
+    }
 }
 
 void printTreeSideways(Tree *tree, int level) {
     if (tree == nullptr) return;
     printTreeSideways(tree->right, level + 1);
     for (int i = 0; i < level; ++i) std::cout << "   ";
-    std::cout << tree->value << "
-";
+    std::cout << tree->value << "\n";
     printTreeSideways(tree->left, level + 1);
 }
 
