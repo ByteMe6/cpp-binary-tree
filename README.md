@@ -7,12 +7,9 @@ A binary search tree implementation in C++.
 ## Structure
 
 ```
-treeStruct.h      — Tree struct and function declarations
-addNewNode.cpp    — recursive insert
-tree_search.cpp   — recursive search, returns path taken
-print_tree.cpp    — pre-order print
-print_tree2.cpp   — sideways tree print
-main.cpp          — demo: insert 10 random values, search for 5
+tree.h       — Tree struct and function declarations
+tree.cpp     — insert, search, and print implementations
+main.cpp     — demo: insert 10 random values, search for 5
 ```
 
 ## How it works
