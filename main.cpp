@@ -1,15 +1,14 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include <cstdlib>
 #include "tree.h"
 
 int main() {
     Tree *tree = new Tree{0, nullptr, nullptr};
 
     for (int i = 0; i < 10; ++i)
-        addNode(tree, random() % 10);
-
+        addNode(tree, rand() % 10);
     addNode(tree, 4);
+
     printTree(tree);
 
     std::vector<std::string> path;
@@ -17,8 +16,7 @@ int main() {
 
     std::cout << result;
     for (const auto &step : path)
-        std::cout << "
-" << step;
+        std::cout << "\n" << step;
 
     delete tree;
     return 0;
