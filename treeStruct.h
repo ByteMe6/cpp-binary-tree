@@ -1,7 +1,6 @@
+#pragma once
 #include <string>
 #include <vector>
-
-using namespace std;
 
 struct Tree {
     int root;
@@ -10,6 +9,6 @@ struct Tree {
 };
 
 Tree* add_new_node(Tree *tree, int new_item);
-void print_tree2(Tree *node_tree, int level = 0);
-void print_tree(Tree *node_tree);
-int treeSearch(Tree *tree, int search, vector<string> &counter);
+void  print_tree(Tree *node_tree);
+void  print_tree2(Tree *node_tree, int level = 0);
+int   treeSearch(Tree *tree, int search, std::vector<std::string> &path);
